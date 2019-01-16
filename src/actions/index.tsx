@@ -15,7 +15,7 @@ export interface CurrentPhoto {
 
 export interface OverturnPhoto {
     type: constants.OVERTURN_PHOTO;
-    overturn: boolean
+    turnOver: boolean
 }
 
 export type EnthusiasmAction = IncrementEnthusiasm | DecrementEnthusiasm;
@@ -41,9 +41,9 @@ export function currentPhoto(index:number): CurrentPhoto {
     }
 }
 
-export function overturnPhoto(overturn:boolean): OverturnPhoto {
+export function overturnPhoto(turnOver:boolean): OverturnPhoto {
     return {
         type: constants.OVERTURN_PHOTO,
-        overturn: overturn
+        turnOver: turnOver
     }
 }
